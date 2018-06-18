@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Game</title>
+
+</head>
+<body>
+  <h1>Crystals Collector!</h1>
+  <div>
+  <p class="directions"><br>You will be given a random number at the start of the game<br><br>
+    There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+    <br><br>
+    You win the game by matching your total score to a ranom number, you lose the game if your total score goes above the random number.
+    <br> 
+  </p>
+  </div>
+
+  <h2>Number to Guess: <span id="number-to-guess"></span></h2>
+  <h2>Wins: <span id="number-of-wins"></span></h2>
+  <h2>Losses: <span id="number-of-losses"></span></h2>
+  <h2>Current Score: <span id="score"></span></h2>
+  
+  
+
+    <!-- We gave our crystal image the class ".crystal-image" to apply the resize-->
+    <img class="crystal-image" id="first-image" src="assets/images/purple.png" alt="crystals">
+    <img class="crystal-image" id="second-image" src="assets/images/original.png" alt="crystals">
+    <img class="crystal-image" id="third-image" src="assets/images/Lightsaber.png" alt="crystals">
+    <img class="crystal-image" id="fourth-image" src="assets/images/green.png" alt="crystals">
+
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>   
+</body>
+</html>

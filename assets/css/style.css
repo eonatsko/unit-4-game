@@ -1,0 +1,25 @@
+body{
+background-image: url(../images/pink-dust.png);
+float:left;
+}
+
+h1{
+    text-shadow: 0 0 15px #b48484;
+    color:white;
+    
+}
+div{
+    width:50%;
+    margin: auto;
+    float:left;
+}
+p.directions {
+    background-color: #b48484;;
+    
+}
+
+.crystal-image {
+    width: 100px;
+    height: 100px;
+  }
+
