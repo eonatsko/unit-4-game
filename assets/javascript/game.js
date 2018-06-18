@@ -1,6 +1,9 @@
 var targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 var newRandom = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 $("#number-to-guess").text(targetNumber);
+var winning = "Congrats, You Are the Superior Being!";
+var losing = "Oh-oh, Bettery Try Again";
+
 
 var counter = 0;
 var wins = 0;
@@ -14,57 +17,73 @@ var fourthVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 
 //crystal 1 logic
 $("#first-image").on("click", function () {
+    $("#number-to-guess").text(targetNumber);
     counter += firstVal;
     // Clicking the button updates total score
-    $("#score").text(counter);
+    $("#current-score").text(counter);
+    // What Happens if user guesses right
     if (counter === targetNumber) {
         wins += 1;
         counter = 0;
         targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
         firstVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        secondVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        thirdVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        fourthVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         $("#number-to-guess").text(targetNumber);
         $("#number-of-wins").text(wins);
-        $("#score").text(counter);
-
-        alert("You Win!");
+        $("#current-score").text(counter);
+        $("#alert").text(winning);
     }
+    // What Happens if user guesses wrong
     else if (counter >= targetNumber) {
         losses += 1;
         counter = 0;
         targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
         firstVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        secondVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        thirdVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        fourthVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         $("#number-to-guess").text(targetNumber);
         $("#number-of-losses").text(losses);
-        $("#score").text(counter);
+        $("#current-score").text(counter);
+        $("#alert").text(losing);
 
-        alert("You lose!!");
+
     }
 });
 
 //crystal 2 logic
 $("#second-image").on("click", function () {
     counter += secondVal;
-    // Clicking the button updates total score
-    $("#score").text(counter);
+    $("#current-score").text(counter);
+    // What Happens if user guesses right
     if (counter === targetNumber) {
         wins += 1;
         counter = 0;
         targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+        firstVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         secondVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        thirdVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        fourthVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         $("#number-to-guess").text(targetNumber);
         $("#number-of-wins").text(wins);
-        $("#score").text(counter);
+        $("#current-score").text(counter);
+        $("#alert").text(winning);
     }
+    // What Happens if user guesses wrong
     else if (counter >= targetNumber) {
-
-        // Then they are alerted with a loss.
         losses += 1;
         counter = 0;
         targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+        firstVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         secondVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        thirdVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        fourthVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         $("#number-to-guess").text(targetNumber);
         $("#number-of-losses").text(losses);
-        $("#score").text(counter);
+        $("#current-score").text(counter);
+        $("#alert").text(losing);
     }
 });
 
@@ -72,53 +91,69 @@ $("#second-image").on("click", function () {
 //crystal 3 logic
 $("#third-image").on("click", function () {
     counter += thirdVal;
-    // Clicking the button updates total score
-    $("#score").text(counter);
+    $("#current-score").text(counter);
+    // What Happens if user guesses right
     if (counter === targetNumber) {
         wins += 1;
         counter = 0;
         targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+        firstVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        secondVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         thirdVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        fourthVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         $("#number-to-guess").text(targetNumber);
         $("#number-of-wins").text(wins);
-        $("#score").text(counter);
+        $("#current-score").text(counter);
+        $("#alert").text(winning);
     }
+    // What Happens if user guesses wrong
     else if (counter >= targetNumber) {
-
-        // Then they are alerted with a loss.
         counter = 0;
         losses += 1;
         targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+        firstVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        secondVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         thirdVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        fourthVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         $("#number-to-guess").text(targetNumber);
         $("#number-of-losses").text(losses);
-        $("#score").text(counter);
+        $("#current-score").text(counter);
+        $("#alert").text(losing);
     }
 });
 
 //crystal 3 logic
 $("#fourth-image").on("click", function () {
     counter += fourthVal;
-     // Clicking the button updates total score
-     $("#score").text(counter);
+    $("#current-score").text(counter);
+    // What Happens if user guesses right
     if (counter === targetNumber) {
         wins += 1;
         counter = 0;
         targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+        firstVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        secondVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        thirdVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         fourthVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         $("#number-to-guess").text(targetNumber);
         $("#number-of-wins").text(wins);
-        $("#score").text(counter);
+        $("#current-score").text(counter);
+        $("#alert").text(winning);
     }
+    // What Happens if user guesses wrong
     else if (counter >= targetNumber) {
         // Update score, reset values
         losses += 1;
         counter = 0;
         targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+        firstVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        secondVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        thirdVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         fourthVal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         $("#number-to-guess").text(targetNumber);
         $("#number-of-losses").text(losses);
-        $("#score").text(counter);
+        $("#current-score").text(counter);
+        $("#alert").text(losing);
     }
 });
 

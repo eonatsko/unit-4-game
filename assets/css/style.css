@@ -1,21 +1,40 @@
 body{
-background-image: url(../images/pink-dust.png);
-float:left;
+background-image: url(../images/cutcube.png);
+margin:15px;
 }
 
 h1{
-    text-shadow: 0 0 15px #b48484;
+    text-shadow: 0 0 50px red;
     color:white;
     
 }
-div{
-    width:50%;
-    margin: auto;
-    float:left;
+#score{
+    text-shadow: 0 0 50px turquoise;
+    color:white;  
 }
-p.directions {
-    background-color: #b48484;;
-    
+#wins{
+    text-shadow: 0 0 50px rgb(214, 78, 241);
+    color:white; 
+}
+
+#losses{
+    text-shadow: 0 0 50px rgb(38, 240, 88);
+    color:white; 
+}
+
+#current{
+    text-shadow: 0 0 50px rgb(39, 92, 238);
+    color:white;  
+    margin-top:40px;  
+}
+
+
+
+#directions {
+    background-color: rgba(64, 224, 208, 0.1);
+    padding: 10px;
+    padding-bottom: 80px; 
+    color:white; 
 }
 
 .crystal-image {
@@ -23,3 +42,34 @@ p.directions {
     height: 100px;
   }
 
+#first-image{
+    background-color: rgba(214, 78, 241, 0.1);
+
+}
+
+#second-image{
+    background-color: rgba(39, 92, 238, 0.1);
+
+}
+#third-image{
+    background-color: rgba(64, 224, 208, 0.1);
+
+}
+
+#fourth-image{
+    background-color: rgba(38, 240, 88, 0.1);
+
+}
+.col-sm{
+    margin-top:40px;
+}
+
+.container{
+    margin-top:30px;
+}
+
+#alert{
+    font-size:20px;
+    text-shadow: 0 0 50px red;
+    color:white;  
+}

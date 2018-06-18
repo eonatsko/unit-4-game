@@ -1,39 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystal Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Crystal Game</title>
 
 </head>
+
 <body>
   <h1>Crystals Collector!</h1>
-  <div>
-  <p class="directions"><br>You will be given a random number at the start of the game<br><br>
-    There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
-    <br><br>
-    You win the game by matching your total score to a ranom number, you lose the game if your total score goes above the random number.
-    <br> 
-  </p>
+  <!-- Holds directions-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p id="directions">
+          <br>You will be given a random number at the start of the game.
+          <br>
+          <br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total
+          score.
+          <br>
+          <br> You win the game by matching your total score to a ranom number, you lose the game if your total score goes above
+          the random number.
+          <br>
+          <br> The value of each crystal is hidden from you until you click on it.
+          <br>
+          <br> Each time when the game starts, the game will change the values of each crystal.
+        </p>
+      </div>
+      <!-- Holds number to reach, wins, losses-->
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 id="score">Score to Reach:
+              <span id="number-to-guess"></span>
+            </h2>
+            <h2 id="wins">Wins:
+              <span id="number-of-wins"></span>
+            </h2>
+            <h2 id="losses">Losses:
+              <span id="number-of-losses"></span>
+            </h2>
+          </div>
+        </div>
+        <!-- Holds crystals, current score, and win or loose alerts-->
+        <div class="row">
+          <div class="col-sm">
+            <img class="crystal-image" id="first-image" src="assets/images/purple.png" alt="crystals">
+            <img class="crystal-image" id="third-image" src="assets/images/Lightsaber.png" alt="crystals">
+            <img class="crystal-image" id="second-image" src="assets/images/original.png" alt="crystals">
+
+            <img class="crystal-image" id="fourth-image" src="assets/images/green.png" alt="crystals">
+            <h2 id="current">Total Score:
+              <span id="current-score"></span>
+            </h2>
+            <h2>
+              <span id="alert"></span>
+            </h2>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <h2>Number to Guess: <span id="number-to-guess"></span></h2>
-  <h2>Wins: <span id="number-of-wins"></span></h2>
-  <h2>Losses: <span id="number-of-losses"></span></h2>
-  <h2>Current Score: <span id="score"></span></h2>
-  
-  
-
-    <!-- We gave our crystal image the class ".crystal-image" to apply the resize-->
-    <img class="crystal-image" id="first-image" src="assets/images/purple.png" alt="crystals">
-    <img class="crystal-image" id="second-image" src="assets/images/original.png" alt="crystals">
-    <img class="crystal-image" id="third-image" src="assets/images/Lightsaber.png" alt="crystals">
-    <img class="crystal-image" id="fourth-image" src="assets/images/green.png" alt="crystals">
-
-
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/game.js"></script>   
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
